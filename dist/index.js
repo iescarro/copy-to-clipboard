@@ -18,7 +18,7 @@ export function copyToClipboard(value, targetElement, defaultCopiedText = '📋 
 
     if (targetElement) {
         const originalText = targetElement.innerText;
-        targetElement.innerText = success ? defaultText : defaultFailedText;
+        targetElement.innerText = success ? defaultCopiedText : defaultFailedText;
         setTimeout(() => {
             targetElement.innerText = originalText || defaultText;
         }, 800);
