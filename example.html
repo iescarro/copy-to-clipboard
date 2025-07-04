@@ -1,3 +1,13 @@
-<script src="https://cdn.jsdelivr.net/gh/iescarro/copy-to-clipboard/dist/index.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/iescarro/copy-to-clipboard/dist/index.js"></script>
 
-<button onclick="copyToClipboard('Hello, world!', this, 'Copied!')">Copy</button>
+<button onclick="copyToClipboard('Hello, world!', this, 'Copied!')">Copy</button> -->
+
+<script type="module">
+    import { copyToClipboard } from 'https://cdn.jsdelivr.net/gh/iescarro/copy-to-clipboard/dist/index.js';
+
+    document.getElementById('copyBtn').addEventListener('click', function () {
+        copyToClipboard('Hello, world!', this, 'Copied!');
+    });
+</script>
+
+<button id="copyBtn">Copy</button>

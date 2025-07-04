@@ -1,4 +1,4 @@
-function copyToClipboard(value, targetElement, defaultText = 'Copy') {
+export function copyToClipboard(value, targetElement, defaultCopiedText = '📋 Copied!', defaultFailedText = '❌ Failed!') {
     const textarea = document.createElement('textarea');
     textarea.style.position = 'fixed'; // avoid scroll jump
     textarea.style.opacity = '0';
@@ -18,7 +18,7 @@ function copyToClipboard(value, targetElement, defaultText = 'Copy') {
 
     if (targetElement) {
         const originalText = targetElement.innerText;
-        targetElement.innerText = success ? defaultText : 'Failed'; // '📋 Copied!' : '❌ Failed';
+        targetElement.innerText = success ? defaultText : defaultFailedText;
         setTimeout(() => {
             targetElement.innerText = originalText || defaultText;
         }, 800);
