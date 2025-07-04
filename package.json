@@ -1,6 +1,6 @@
 {
     "name": "copy-to-clipboard",
-    "version": "1.0.3",
+    "version": "1.0.1",
     "description": "A minimal clipboard copy helper for browser apps",
     "main": "dist/index.js",
     "type": "module",
