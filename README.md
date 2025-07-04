@@ -27,8 +27,6 @@ npm install copy-to-clipboard-lite
 <script type="module">
     import { copyToClipboard } from 'https://cdn.jsdelivr.net/gh/iescarro/copy-to-clipboard@v1.0.1/dist/index.js';
 </script>
-
-<a id="copyBtn" data-value="Hello, world!">📋</a>
 ```
 
 ## 🚀 Usage
@@ -51,10 +49,11 @@ npm install copy-to-clipboard-lite
 
 copyToClipboard(value, targetElement?, defaultText?)
 
-Parameter	Type	Description
-value	string	The string to be copied to the clipboard.
-targetElement	Element?	(Optional) An element whose text will temporarily change.
-defaultText	string?	(Optional) The original text to restore after feedback.
+| Parameter       | Type     | Description                                                                 |
+|-----------------|----------|-----------------------------------------------------------------------------|
+| value           | string   | The string to be copied to the clipboard.                                   |
+| targetElement   | Element? | (Optional) An element whose text will temporarily change.                   |
+| defaultText     | string?  | (Optional) The original text to restore after feedback.                     |
 
 Returns: true if copy was successful, otherwise false.
 
