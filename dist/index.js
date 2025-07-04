@@ -20,7 +20,7 @@ export function copyToClipboard(value, targetElement, defaultCopiedText = '📋 
         const originalText = targetElement.innerText;
         targetElement.innerText = success ? defaultCopiedText : defaultFailedText;
         setTimeout(() => {
-            targetElement.innerText = originalText || defaultText;
+            targetElement.innerText = originalText || defaultCopiedText;
         }, 800);
     }
 
