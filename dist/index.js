@@ -1,4 +1,7 @@
-export function copyToClipboard(value, targetElement, defaultCopiedText = '📋 Copied!', defaultFailedText = '❌ Failed!') {
+export function copyToClipboard(targetElement, defaultCopiedText = '📋 Copied!', defaultFailedText = '❌ Failed!') {
+    const value = targetElement.getAttribute('data-value');
+    if (!value) return;
+
     const textarea = document.createElement('textarea');
     textarea.style.position = 'fixed'; // avoid scroll jump
     textarea.style.opacity = '0';
