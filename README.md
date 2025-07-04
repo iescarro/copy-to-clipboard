@@ -1,4 +1,4 @@
-# 📋 copy-to-clipboard-lite
+# 📋 copy-to-clipboard
 
 A lightweight JavaScript utility for copying text to the clipboard with optional UI feedback. No dependencies, no jQuery — just simple, modern code.
 
@@ -47,13 +47,13 @@ npm install copy-to-clipboard-lite
 
 ## 📘 API
 
-copyToClipboard(value, targetElement?, defaultText?)
+copyToClipboard(targetElement?, defaultCopiedText?, defaultFailedText?)
 
-| Parameter       | Type     | Description                                                                 |
-|-----------------|----------|-----------------------------------------------------------------------------|
-| value           | string   | The string to be copied to the clipboard.                                   |
-| targetElement   | Element? | (Optional) An element whose text will temporarily change.                   |
-| defaultText     | string?  | (Optional) The original text to restore after feedback.                     |
+| Parameter          | Type     | Description                                                                 |
+|--------------------|----------|-----------------------------------------------------------------------------|
+| targetElement      | Element? | (Optional) The DOM element whose text will temporarily change during copy feedback. |
+| defaultCopiedText  | string?  | (Optional) The original text to restore after successful copy. Defaults to `📋 Copied!`. |
+| defaultFailedText  | string?  | (Optional) The text to display when copy fails. Defaults to `❌ Failed!`. |
 
 Returns: true if copy was successful, otherwise false.
 
