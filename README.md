@@ -25,31 +25,26 @@ npm install copy-to-clipboard-lite
 
 ```html
 <script type="module">
-  import { copyToClipboard } from 'https://cdn.jsdelivr.net/npm/copy-to-clipboard-lite@1.0.0/dist/index.js';
+    import { copyToClipboard } from 'https://cdn.jsdelivr.net/gh/iescarro/copy-to-clipboard@v1.0.1/dist/index.js';
 </script>
+
+<a id="copyBtn" data-value="Hello, world!">📋</a>
 ```
 
 ## 🚀 Usage
 
 ### Basic Usage
 
-```js
-import { copyToClipboard } from 'copy-to-clipboard-lite';
-
-copyToClipboard('Hello, world!');
-```
-
-### With Feedback Element
-
 ```html
-<button id="copy-btn">Copy</button>
-```
+<script type="module">
+    import { copyToClipboard } from 'https://cdn.jsdelivr.net/gh/iescarro/copy-to-clipboard@v1.0.1/dist/index.js';
 
-```js
-const btn = document.getElementById('copy-btn');
-btn.addEventListener('click', () => {
-  copyToClipboard('This is the copied text!', btn, 'Copy');
-});
+    document.getElementById('copyBtn').addEventListener('click', function () {
+        copyToClipboard(this, '✔️', '❌');
+    });
+</script>
+
+<a id="copyBtn" data-value="Hello, world!">📋</a>
 ```
 
 ## 📘 API
@@ -62,13 +57,6 @@ targetElement	Element?	(Optional) An element whose text will temporarily change.
 defaultText	string?	(Optional) The original text to restore after feedback.
 
 Returns: true if copy was successful, otherwise false.
-
-## 🚀 Publish to npm
-
-```
-npm login
-npm publish --access public
-```
 
 ## 🧪 Example (Live Demo)
 

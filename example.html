@@ -1,9 +1,9 @@
 <script type="module">
-    import { copyToClipboard } from 'https://cdn.jsdelivr.net/gh/iescarro/copy-to-clipboard/dist/index.js?v=3';
+    import { copyToClipboard } from 'https://cdn.jsdelivr.net/gh/iescarro/copy-to-clipboard@v1.0.1/dist/index.js';
 
     document.getElementById('copyBtn').addEventListener('click', function () {
-        copyToClipboard(this, 'Copied!');
+        copyToClipboard(this, '✔️', '❌');
     });
 </script>
 
-<button id="copyBtn" data-value="Hello, worldx!">Copy</button>
+<a id="copyBtn" data-value="Hello, world!">📋</a>
